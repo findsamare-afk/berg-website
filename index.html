@@ -3,18 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <div style="display:flex; align-items:center; gap:15px;">
- <img src="./berg-logo.png" alt="BERG Logo" style="height:70px;">
-  <div>
-    <div class="header-title">
-      Behavioural and Experimental Research Group (BERG)
-    </div>
-    <div style="font-size:13px; opacity:0.9;">
-      University of Peradeniya, Sri Lanka
-    </div>
-  </div>
-</div>
-
+  <title>BERG — Behavioural and Experimental Research Group | University of Peradeniya</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
@@ -23,11 +12,14 @@
       --maroon:#5B0F1A;
       --maroon-dark:#4A0A12;
       --gold:#C8A23A;
+
       --bg:#F4F4F4;
       --surface:#FFFFFF;
       --border:#E6E6E6;
+
       --text:#222222;
       --muted:#666666;
+
       --radius:10px;
       --max:1100px;
     }
@@ -47,15 +39,6 @@
       padding:0 20px;
     }
 
-    /* Utility bar */
-    .utility{
-      background:#2c2c2c;
-      color:#fff;
-      font-size:13px;
-      padding:8px 0;
-      text-align:right;
-    }
-
     /* Header */
     header{
       background:var(--maroon-dark);
@@ -63,54 +46,41 @@
       border-bottom:3px solid var(--gold);
     }
 
-    .header-top{
-      padding:15px 0;
-    }
-
-    .header-title{
-      font-family:Merriweather, serif;
-      font-size:20px;
-      font-weight:700;
-    }
-
+    /* Nav */
     nav{
       padding:10px 0;
       border-top:1px solid rgba(255,255,255,0.2);
     }
-
     nav a{
       color:#fff;
       margin-right:18px;
       text-decoration:none;
       font-size:14px;
+      font-weight:600;
     }
-
-    nav a:hover{
-      color:var(--gold);
-    }
+    nav a:hover{ color:var(--gold); }
 
     /* Hero */
     .hero{
-      background:linear-gradient(rgba(74,10,18,0.85), rgba(74,10,18,0.85)), url('assets/slide1.jpg');
+      background:
+        linear-gradient(rgba(74,10,18,0.85), rgba(74,10,18,0.85)),
+        url('assets/slide1.jpg');
       background-size:cover;
       background-position:center;
       color:#fff;
       padding:80px 0;
     }
-
     .hero h1{
       font-family:Merriweather, serif;
       font-size:32px;
-      margin-bottom:10px;
+      margin:0 0 10px;
     }
-
     .gold-line{
       width:80px;
       height:3px;
       background:var(--gold);
       margin:15px 0;
     }
-
     .btn{
       display:inline-block;
       padding:10px 15px;
@@ -118,7 +88,7 @@
       background:var(--gold);
       color:var(--maroon-dark);
       text-decoration:none;
-      font-weight:600;
+      font-weight:700;
       border-radius:6px;
     }
 
@@ -130,12 +100,10 @@
       border-radius:var(--radius);
       border:1px solid var(--border);
     }
-
     .section h2{
       font-family:Merriweather, serif;
-      margin-top:0;
+      margin:0;
     }
-
     .title-line{
       width:60px;
       height:3px;
@@ -151,39 +119,44 @@
       border-top:3px solid var(--gold);
       margin-top:30px;
     }
-
     footer p{
       margin:5px 0;
       font-size:14px;
     }
-
     footer a{
       color:#fff;
       text-decoration:none;
     }
+    footer a:hover{ color:var(--gold); }
 
-    footer a:hover{
-      color:var(--gold);
+    @media (max-width: 720px){
+      nav a{ display:inline-block; margin:6px 14px 6px 0; }
+      .hero{ padding:60px 0; }
+      .hero h1{ font-size:26px; }
     }
-
   </style>
 </head>
 
 <body>
 
-<div class="utility">
-  <div class="container">
-    University of Peradeniya | Contact
-  </div>
-</div>
-
 <header>
-  <div class="container header-top">
-    <div class="header-title">
-      Behavioural and Experimental Research Group (BERG)
+  <div class="container" style="display:flex; align-items:center; justify-content:space-between; padding:15px 0;">
+    <div style="display:flex; align-items:center; gap:15px;">
+      <img src="assets/berg-logo.png" alt="BERG Logo" style="height:55px;">
+      <div>
+        <div style="font-family:Merriweather, serif; font-size:20px; font-weight:700; line-height:1.2;">
+          Behavioural and Experimental Research Group (BERG)
+        </div>
+        <div style="font-size:13px; opacity:0.9;">
+          University of Peradeniya, Sri Lanka
+        </div>
+      </div>
     </div>
-    <div style="font-size:13px;opacity:0.9;">
-      University of Peradeniya, Sri Lanka
+
+    <div style="font-size:13px; opacity:0.95; text-align:right;">
+      <a href="https://pdn.ac.lk" style="color:#fff; text-decoration:none;">University of Peradeniya</a>
+      <span style="opacity:0.6;"> | </span>
+      <a href="#contact" style="color:#fff; text-decoration:none;">Contact</a>
     </div>
   </div>
 
@@ -200,7 +173,7 @@
   <div class="container">
     <h1>Experimental Evidence for Better Decisions</h1>
     <div class="gold-line"></div>
-    <p>
+    <p style="max-width:780px; margin:0;">
       BERG conducts laboratory, lab-in-the-field, and policy wind-tunnel experiments
       to study behaviour and support evidence-based policy design.
     </p>
@@ -228,14 +201,15 @@
   <section class="section" id="research">
     <h2>Research Focus</h2>
     <div class="title-line"></div>
+
     <p><strong>Laboratory Experiments for Social Sciences</strong><br>
-    Controlled studies to identify behavioural mechanisms and causal effects.</p>
+      Controlled studies to identify behavioural mechanisms and causal effects.</p>
 
     <p><strong>Lab-in-the-Field Experiments for Social Sciences</strong><br>
-    Field-adapted experimental designs combining realism and internal validity.</p>
+      Field-adapted experimental designs combining realism and internal validity.</p>
 
     <p><strong>Policy Wind-Tunnel Tests</strong><br>
-    Pre-testing policy ideas and behavioural interventions before large-scale implementation.</p>
+      Pre-testing policy ideas and behavioural interventions before large-scale implementation.</p>
   </section>
 
   <section class="section" id="people">
@@ -243,16 +217,16 @@
     <div class="title-line"></div>
 
     <p><strong>Coordinator</strong><br>
-    Don Isuru Samaranayake — Coordinator, Researcher</p>
+      Don Isuru Samaranayake </p>
 
     <p><strong>Advisor</strong><br>
-    Sheryar Banuri — Advisor</p>
+      Sheryar Banuri </p>
 
     <p><strong>Researchers</strong><br>
-    Uwin Ariyarathne<br>
-    Rakhitha Munasinghe<br>
-    Sameera Fernando<br>
-    Muthursan Asokkumar</p>
+      Uwin Ariyarathne<br>
+      Rakhitha Munasinghe<br>
+      Sameera Fernando<br>
+      Muthursan Asokkumar</p>
   </section>
 
   <section class="section" id="publications">
@@ -263,19 +237,18 @@
       Up-to-date publication lists are available via Google Scholar profiles.
     </p>
 
-    <ul>
-      <li><a href="#" target="_blank">Don Isuru Samaranayake — Google Scholar</a></li>
-      <li><a href="#" target="_blank">Sheryar Banuri — Google Scholar</a></li>
+    <ul style="margin:0; padding-left:18px;">
+      <li><a href="#" target="_blank" rel="noopener">Don Isuru Samaranayake — Google Scholar</a></li>
+      <li><a href="#" target="_blank" rel="noopener">Sheryar Banuri — Google Scholar</a></li>
     </ul>
   </section>
 
   <section class="section" id="contact">
     <h2>Contact</h2>
     <div class="title-line"></div>
-    <p>
-      Behavioural and Experimental Research Group (BERG)<br>
-      University of Peradeniya<br>
-      Sri Lanka<br><br>
+    <p style="margin:0;">
+      <strong>Behavioural and Experimental Research Group (BERG)</strong><br>
+      University of Peradeniya, Sri Lanka<br><br>
       Email: <a href="mailto:berg@mgt.pdn.ac.lk">berg@mgt.pdn.ac.lk</a>
     </p>
   </section>
@@ -287,11 +260,17 @@
     <p><strong>Behavioural and Experimental Research Group (BERG)</strong></p>
     <p>University of Peradeniya, Sri Lanka</p>
     <p><a href="mailto:berg@mgt.pdn.ac.lk">berg@mgt.pdn.ac.lk</a></p>
-    <p>© 2026 BERG</p>
+    <p style="opacity:0.85;">© <span id="year"></span> BERG</p>
   </div>
 </footer>
 
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
+
+
 
 

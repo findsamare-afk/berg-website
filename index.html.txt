@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BERG — Behavioural and Experimental Research Group | University of Peradeniya</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --maroon:#5B0F1A;
+      --maroon-dark:#4A0A12;
+      --gold:#C8A23A;
+      --bg:#F4F4F4;
+      --surface:#FFFFFF;
+      --border:#E6E6E6;
+      --text:#222222;
+      --muted:#666666;
+      --radius:10px;
+      --max:1100px;
+    }
+
+    *{box-sizing:border-box;}
+    body{
+      margin:0;
+      font-family:Inter, Arial, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+
+    .container{
+      max-width:var(--max);
+      margin:auto;
+      padding:0 20px;
+    }
+
+    /* Utility bar */
+    .utility{
+      background:#2c2c2c;
+      color:#fff;
+      font-size:13px;
+      padding:8px 0;
+      text-align:right;
+    }
+
+    /* Header */
+    header{
+      background:var(--maroon-dark);
+      color:#fff;
+      border-bottom:3px solid var(--gold);
+    }
+
+    .header-top{
+      padding:15px 0;
+    }
+
+    .header-title{
+      font-family:Merriweather, serif;
+      font-size:20px;
+      font-weight:700;
+    }
+
+    nav{
+      padding:10px 0;
+      border-top:1px solid rgba(255,255,255,0.2);
+    }
+
+    nav a{
+      color:#fff;
+      margin-right:18px;
+      text-decoration:none;
+      font-size:14px;
+    }
+
+    nav a:hover{
+      color:var(--gold);
+    }
+
+    /* Hero */
+    .hero{
+      background:linear-gradient(rgba(74,10,18,0.85), rgba(74,10,18,0.85)), url('assets/slide1.jpg');
+      background-size:cover;
+      background-position:center;
+      color:#fff;
+      padding:80px 0;
+    }
+
+    .hero h1{
+      font-family:Merriweather, serif;
+      font-size:32px;
+      margin-bottom:10px;
+    }
+
+    .gold-line{
+      width:80px;
+      height:3px;
+      background:var(--gold);
+      margin:15px 0;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:10px 15px;
+      margin-top:10px;
+      background:var(--gold);
+      color:var(--maroon-dark);
+      text-decoration:none;
+      font-weight:600;
+      border-radius:6px;
+    }
+
+    /* Sections */
+    .section{
+      background:#fff;
+      margin:20px 0;
+      padding:25px;
+      border-radius:var(--radius);
+      border:1px solid var(--border);
+    }
+
+    .section h2{
+      font-family:Merriweather, serif;
+      margin-top:0;
+    }
+
+    .title-line{
+      width:60px;
+      height:3px;
+      background:var(--gold);
+      margin:10px 0 20px;
+    }
+
+    /* Footer */
+    footer{
+      background:var(--maroon-dark);
+      color:#fff;
+      padding:30px 0;
+      border-top:3px solid var(--gold);
+      margin-top:30px;
+    }
+
+    footer p{
+      margin:5px 0;
+      font-size:14px;
+    }
+
+    footer a{
+      color:#fff;
+      text-decoration:none;
+    }
+
+    footer a:hover{
+      color:var(--gold);
+    }
+
+  </style>
+</head>
+
+<body>
+
+<div class="utility">
+  <div class="container">
+    University of Peradeniya | Contact
+  </div>
+</div>
+
+<header>
+  <div class="container header-top">
+    <div class="header-title">
+      Behavioural and Experimental Research Group (BERG)
+    </div>
+    <div style="font-size:13px;opacity:0.9;">
+      University of Peradeniya, Sri Lanka
+    </div>
+  </div>
+
+  <nav class="container">
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#people">People</a>
+    <a href="#publications">Publications</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>Experimental Evidence for Better Decisions</h1>
+    <div class="gold-line"></div>
+    <p>
+      BERG conducts laboratory, lab-in-the-field, and policy wind-tunnel experiments
+      to study behaviour and support evidence-based policy design.
+    </p>
+    <a href="#research" class="btn">Explore Research</a>
+  </div>
+</section>
+
+<div class="container">
+
+  <section class="section" id="about">
+    <h2>Welcome to BERG</h2>
+    <div class="title-line"></div>
+    <p>
+      The Behavioural and Experimental Research Group (BERG) is a research initiative
+      based at the University of Peradeniya dedicated to advancing knowledge on social
+      and economic behaviour through rigorous experimental methods.
+    </p>
+    <p>
+      BERG conducts laboratory, lab-in-the-field, and policy-oriented experimental
+      research to better understand decision-making, incentives, cooperation,
+      and behavioural responses in both controlled and real-world environments.
+    </p>
+  </section>
+
+  <section class="section" id="research">
+    <h2>Research Focus</h2>
+    <div class="title-line"></div>
+    <p><strong>Laboratory Experiments for Social Sciences</strong><br>
+    Controlled studies to identify behavioural mechanisms and causal effects.</p>
+
+    <p><strong>Lab-in-the-Field Experiments for Social Sciences</strong><br>
+    Field-adapted experimental designs combining realism and internal validity.</p>
+
+    <p><strong>Policy Wind-Tunnel Tests</strong><br>
+    Pre-testing policy ideas and behavioural interventions before large-scale implementation.</p>
+  </section>
+
+  <section class="section" id="people">
+    <h2>Research Team</h2>
+    <div class="title-line"></div>
+
+    <p><strong>Coordinator</strong><br>
+    Don Isuru Samaranayake — Coordinator, Researcher</p>
+
+    <p><strong>Advisor</strong><br>
+    Sheryar Banuri — Advisor</p>
+
+    <p><strong>Researchers</strong><br>
+    Uwin Ariyarathne<br>
+    Rakhitha Munasinghe<br>
+    Sameera Fernando<br>
+    Muthursan Asokkumar</p>
+  </section>
+
+  <section class="section" id="publications">
+    <h2>Publications</h2>
+    <div class="title-line"></div>
+    <p>
+      Members of BERG publish in peer-reviewed journals and working paper series.
+      Up-to-date publication lists are available via Google Scholar profiles.
+    </p>
+
+    <ul>
+      <li><a href="#" target="_blank">Don Isuru Samaranayake — Google Scholar</a></li>
+      <li><a href="#" target="_blank">Sheryar Banuri — Google Scholar</a></li>
+    </ul>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Contact</h2>
+    <div class="title-line"></div>
+    <p>
+      Behavioural and Experimental Research Group (BERG)<br>
+      University of Peradeniya<br>
+      Sri Lanka<br><br>
+      Email: <a href="mailto:berg@mgt.pdn.ac.lk">berg@mgt.pdn.ac.lk</a>
+    </p>
+  </section>
+
+</div>
+
+<footer>
+  <div class="container">
+    <p><strong>Behavioural and Experimental Research Group (BERG)</strong></p>
+    <p>University of Peradeniya, Sri Lanka</p>
+    <p><a href="mailto:berg@mgt.pdn.ac.lk">berg@mgt.pdn.ac.lk</a></p>
+    <p>© 2026 BERG</p>
+  </div>
+</footer>
+
+</body>
+</html>

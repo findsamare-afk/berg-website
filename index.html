@@ -32,21 +32,20 @@
       color:var(--text);
       line-height:1.6;
     }
-
     .container{
       max-width:var(--max);
       margin:auto;
       padding:0 20px;
     }
 
-    /* Header */
+    /* ===== Header ===== */
     header{
       background:var(--maroon-dark);
       color:#fff;
       border-bottom:3px solid var(--gold);
     }
 
-    /* Nav */
+    /* ===== Nav ===== */
     nav{
       padding:10px 0;
       border-top:1px solid rgba(255,255,255,0.2);
@@ -57,42 +56,75 @@
       text-decoration:none;
       font-size:14px;
       font-weight:600;
+      display:inline-block;
+      padding:4px 0;
     }
     nav a:hover{ color:var(--gold); }
 
-    /* Hero */
+    /* ===== HERO (slider behind text) ===== */
     .hero{
-      background:
-        linear-gradient(rgba(74,10,18,0.85), rgba(74,10,18,0.85)),
-        url('assets/slide1.jpg');
-      background-size:cover;
-      background-position:center;
+      position:relative;
+      height:520px;
+      overflow:hidden;
+      border-bottom:3px solid var(--gold);
+      background:#000;
       color:#fff;
-      padding:80px 0;
+    }
+    .hero-slides img{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:520px;
+      object-fit:cover;
+      opacity:0;
+      transition:opacity 1.5s ease-in-out;
+      z-index:1;
+    }
+    .hero-slides img.active{ opacity:1; }
+
+    .hero-overlay{
+      position:absolute;
+      inset:0;
+      background:linear-gradient(rgba(74,10,18,0.72), rgba(74,10,18,0.72));
+      z-index:2;
+      display:flex;
+      align-items:center;
+    }
+    .hero-content{
+      max-width:820px;
+      padding:10px 0;
     }
     .hero h1{
       font-family:Merriweather, serif;
-      font-size:32px;
+      font-size:36px;
       margin:0 0 10px;
+      line-height:1.25;
+    }
+    .hero p{
+      font-size:17px;
+      margin:0 0 18px;
+      opacity:0.98;
     }
     .gold-line{
       width:80px;
       height:3px;
       background:var(--gold);
-      margin:15px 0;
+      margin:14px 0;
     }
     .btn{
       display:inline-block;
-      padding:10px 15px;
-      margin-top:10px;
+      padding:10px 18px;
       background:var(--gold);
       color:var(--maroon-dark);
-      text-decoration:none;
       font-weight:700;
+      text-decoration:none;
       border-radius:6px;
     }
+    .btn:hover{
+      filter:brightness(0.96);
+    }
 
-    /* Sections */
+    /* ===== Sections ===== */
     .section{
       background:#fff;
       margin:20px 0;
@@ -111,7 +143,7 @@
       margin:10px 0 20px;
     }
 
-    /* Footer */
+    /* ===== Footer ===== */
     footer{
       background:var(--maroon-dark);
       color:#fff;
@@ -130,9 +162,11 @@
     footer a:hover{ color:var(--gold); }
 
     @media (max-width: 720px){
-      nav a{ display:inline-block; margin:6px 14px 6px 0; }
-      .hero{ padding:60px 0; }
-      .hero h1{ font-size:26px; }
+      .hero{ height:360px; }
+      .hero-slides img{ height:360px; }
+      .hero h1{ font-size:24px; }
+      .hero p{ font-size:15px; }
+      nav a{ margin:6px 14px 6px 0; }
     }
   </style>
 </head>
@@ -140,9 +174,10 @@
 <body>
 
 <header>
-  <div class="container" style="display:flex; align-items:center; justify-content:space-between; padding:15px 0;">
+  <div class="container" style="display:flex; align-items:center; justify-content:space-between; padding:15px 0; gap:16px;">
     <div style="display:flex; align-items:center; gap:15px;">
-     <img src="./berg-logo1.png" alt="BERG Logo" style="height:85px;">
+      <!-- LOGO: ensure this exists exactly: assets/berg-logo1.png -->
+      <img src="berg-logo1.png" alt="BERG Logo" style="height:55px;">
       <div>
         <div style="font-family:Merriweather, serif; font-size:20px; font-weight:700; line-height:1.2;">
           Behavioural and Experimental Research Group (BERG)
@@ -153,7 +188,7 @@
       </div>
     </div>
 
-    <div style="font-size:13px; opacity:0.95; text-align:right;">
+    <div style="font-size:13px; opacity:0.95; text-align:right; white-space:nowrap;">
       <a href="https://www.pdn.ac.lk/" style="color:#fff; text-decoration:none;">University of Peradeniya</a>
       <span style="opacity:0.6;"> | </span>
       <a href="#contact" style="color:#fff; text-decoration:none;">Contact</a>
@@ -169,15 +204,26 @@
   </nav>
 </header>
 
-<section class="hero">
-  <div class="container">
-    <h1>Experimental Evidence for Better Decisions</h1>
-    <div class="gold-line"></div>
-    <p style="max-width:780px; margin:0;">
-      BERG conducts laboratory, lab-in-the-field, and policy wind-tunnel experiments
-      to study behaviour and support evidence-based policy design.
-    </p>
-    <a href="#research" class="btn">Explore Research</a>
+<!-- ===== HERO WITH BACKGROUND SLIDESHOW ===== -->
+<section class="hero" aria-label="BERG hero slideshow">
+  <div class="hero-slides" aria-hidden="true">
+    <img src="images/slide1.jpg" class="active" alt="">
+    <img src="images/slide2.jpg" alt="">
+    <img src="images/slide3.jpg" alt="">
+    <img src="images/slide4.jpg" alt="">
+    <img src="images/slide5.jpg" alt="">
+  </div>
+
+  <div class="hero-overlay">
+    <div class="container hero-content">
+      <h1>Experimental Evidence for Better Decisions</h1>
+      <div class="gold-line"></div>
+      <p>
+        BERG conducts laboratory, lab-in-the-field, and policy wind-tunnel experiments
+        to study behaviour and support evidence-based policy design.
+      </p>
+      <a href="#research" class="btn">Explore Research</a>
+    </div>
   </div>
 </section>
 
@@ -217,7 +263,7 @@
     <div class="title-line"></div>
 
     <p><strong>Coordinator</strong><br>
-      Don Isuru Samaranayake </p>
+      Isuru Samaranayake </p>
 
     <p><strong>Advisor</strong><br>
       Sheryar Banuri </p>
@@ -265,11 +311,26 @@
 </footer>
 
 <script>
+  // Footer year
   document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Hero slideshow
+  const slides = document.querySelectorAll(".hero-slides img");
+  let current = 0;
+
+  function changeSlide() {
+    slides[current].classList.remove("active");
+    current = (current + 1) % slides.length;
+    slides[current].classList.add("active");
+  }
+
+  setInterval(changeSlide, 4000); // change every 4 seconds
 </script>
 
 </body>
 </html>
+
+
 
 
 

@@ -168,6 +168,73 @@
       .hero p{ font-size:15px; }
       nav a{ margin:6px 14px 6px 0; }
     }
+
+    /* ===== People (Team) Grid ===== */
+.people-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:16px;
+}
+
+.person-card{
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  background:#fff;
+  overflow:hidden;
+}
+
+.person-photo{
+  width:100%;
+  height:240px;
+  object-fit:cover;
+  display:block;
+  background:#eee;
+}
+
+.person-body{
+  padding:14px 16px 16px;
+}
+
+.person-name{
+  margin:0;
+  font-family:Merriweather, serif;
+  font-size:16px;
+}
+
+.person-role{
+  margin:4px 0 10px;
+  color:var(--muted);
+  font-size:13px;
+  font-weight:600;
+}
+
+.person-bio{
+  margin:0 0 12px;
+  color:var(--text);
+  font-size:13.5px;
+}
+
+.person-links a{
+  font-size:13px;
+  font-weight:700;
+  color:var(--maroon-dark);
+  text-decoration:none;
+  margin-right:12px;
+}
+
+.person-links a:hover{
+  color:var(--gold);
+  text-decoration:underline;
+}
+
+@media (max-width: 900px){
+  .people-grid{ grid-template-columns:repeat(2, 1fr); }
+}
+@media (max-width: 560px){
+  .people-grid{ grid-template-columns:1fr; }
+  .person-photo{ height:220px; }
+}
+
   </style>
 </head>
 
@@ -259,21 +326,105 @@
   </section>
 
   <section class="section" id="people">
-    <h2>Research Team</h2>
-    <div class="title-line"></div>
+  <h2>Research Team</h2>
+  <div class="title-line"></div>
 
-    <p><strong>Coordinator</strong><br>
-      Isuru Samaranayake </p>
+  <div class="people-grid">
 
-    <p><strong>Advisor</strong><br>
-      Sheryar Banuri </p>
+    <!-- Coordinator -->
+    <div class="person-card">
+      <img class="person-photo" src="Isuru.jpg" alt="Don Isuru Samaranayake">
+      <div class="person-body">
+        <h3 class="person-name">Isuru Samaranayake</h3>
+        <div class="person-role">Coordinator, Researcher</div>
+        <p class="person-bio">
+          Behavioural and experimental economist focusing on decision-making,
+          incentives, and asset market behaviour using laboratory and field experiments.
+        </p>
+        <div class="person-links">
+          <a href="mailto:berg@mgt.pdn.ac.lk">Email</a>
+        </div>
+      </div>
+    </div>
 
-    <p><strong>Researchers</strong><br>
-      Uwin Ariyarathne<br>
-      Rakhitha Munasinghe<br>
-      Sameera Fernando<br>
-      Muthursan Asokkumar</p>
-  </section>
+    <!-- Advisor -->
+    <div class="person-card">
+      <img class="person-photo" src="Sheheryar.jpg" alt="Sheryar Banuri">
+      <div class="person-body">
+        <h3 class="person-name">Sheryar Banuri</h3>
+        <div class="person-role">Advisor</div>
+        <p class="person-bio">
+          Provides strategic guidance on experimental design, behavioural interventions,
+          and applied research in social and economic settings.
+        </p>
+      </div>
+    </div>
+
+    <!-- Researchers -->
+
+    <div class="person-card">
+      <img class="person-photo" src="Uwin.jpg" alt="Uwin Ariyarathne">
+      <div class="person-body">
+        <h3 class="person-name">Uwin Ariyarathne</h3>
+        <div class="person-role">Researcher</div>
+        <p class="person-bio">
+          Works on laboratory and lab-in-the-field experiments,
+          supporting research implementation and data analysis.
+        </p>
+      </div>
+    </div>
+
+    <div class="person-card">
+      <img class="person-photo" src="Rakhitha.jpg" alt="Rakhitha Munasinghe">
+      <div class="person-body">
+        <h3 class="person-name">Rakhitha Munasinghe</h3>
+        <div class="person-role">Researcher</div>
+        <p class="person-bio">
+          Contributes to behavioural research projects with a focus on
+          participant coordination and experimental operations.
+        </p>
+      </div>
+    </div>
+
+    <div class="person-card">
+      <img class="person-photo" src="Sameera.jpg" alt="Sameera Fernando">
+      <div class="person-body">
+        <h3 class="person-name">Sameera Fernando</h3>
+        <div class="person-role">Researcher</div>
+        <p class="person-bio">
+          Supports data collection, research logistics,
+          and experimental implementation across BERG projects.
+        </p>
+      </div>
+    </div>
+
+    <div class="person-card">
+      <img class="person-photo" src="Udayangani.jpg" alt="Udayangani Rathnayake">
+      <div class="person-body">
+        <h3 class="person-name">Udayangani Rathnayake</h3>
+        <div class="person-role">Researcher</div>
+        <p class="person-bio">
+          Contributes to behavioural and experimental research activities,
+          supporting field implementation and research coordination.
+        </p>
+      </div>
+    </div>
+
+    <div class="person-card">
+      <img class="person-photo" src="Mithursan.jpg" alt="Muthursan Asokkumar">
+      <div class="person-body">
+        <h3 class="person-name">Muthursan Asokkumar</h3>
+        <div class="person-role">Researcher</div>
+        <p class="person-bio">
+          Engages in experimental design and quantitative analysis,
+          assisting in BERG’s empirical research initiatives.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
 <section class="section" id="publications">
   <h2>Publications</h2>
@@ -328,6 +479,7 @@
 
 </body>
 </html>
+
 
 
 

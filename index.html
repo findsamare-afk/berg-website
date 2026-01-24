@@ -245,8 +245,9 @@
   margin-left: 8px;
 }
 
-.nav-btn:hover{
-  filter: brightness(0.96);
+.nav-btn-outline:hover{
+  background: var(--gold);
+  color: var(--maroon-dark) !important;
   text-decoration: none;
 }
 
@@ -267,6 +268,21 @@
 
 
     .register-btn{
+  display:inline-block;
+  margin-top:15px;
+  padding:10px 20px;
+  background: var(--gold);
+  color: var(--maroon-dark);
+  font-weight:800;
+  text-decoration:none;
+  border-radius:6px;
+}
+
+.register-btn:hover{
+  filter:brightness(0.96);
+}
+
+      .register-btn{
   display:inline-block;
   margin-top:15px;
   padding:10px 20px;
@@ -541,7 +557,7 @@
   <h2>Register with Us</h2>
   <div class="title-line"></div>
   <p>
-    Interested in participating in experiments or collaborating with BERG?
+    Interested in participating in experiments with BERG?
     Register your interest using the form below.
   </p>
 
@@ -549,10 +565,25 @@
      href="https://forms.gle/JuXxdJkX1P34kKpCA"
      target="_blank"
      rel="noopener">
-     Register Now
+     Register as a Participant
   </a>
 </section>
 
+  <section class="section" id="register">
+  <h2>Collaborate with Us</h2>
+  <div class="title-line"></div>
+  <p>
+    Interested in collaborating with BERG?
+    Register your interest using the form below.
+  </p>
+
+  <a class="register-btn"
+     href="https://forms.gle/JuXxdJkX1P34kKpCA"
+     target="_blank"
+     rel="noopener">
+     Register as a Collaborator
+  </a>
+</section>
 
 
   <section class="section" id="contact">
@@ -595,6 +626,7 @@
 
 </body>
 </html>
+
 
 
 

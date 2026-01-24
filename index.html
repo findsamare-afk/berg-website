@@ -237,41 +237,34 @@
 
     /* Button-style nav link */
 
-    .nav-btn,
 .nav-btn-outline{
-  display: inline-flex;
-  align-items: center;
-  height: 36px;              /* fixed height for alignment */
-  padding: 0 14px;           /* remove vertical padding */
+  border: 2px solid var(--gold);
+  color: var(--gold) !important;
+  padding: 5px 12px;
   border-radius: 6px;
   font-weight: 800;
   margin-left: 8px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-/* Register (filled by default) */
-.nav-btn{
-  background: var(--gold);
-  color: var(--maroon-dark) !important;
-  border: 2px solid var(--gold);
-}
-
-.nav-btn:hover{
-  background: transparent;
-  color: var(--gold) !important;
-}
-
-/* Collaborate (outline by default) */
-.nav-btn-outline{
-  background: transparent;
-  color: var(--gold) !important;
-  border: 2px solid var(--gold);
 }
 
 .nav-btn-outline:hover{
   background: var(--gold);
   color: var(--maroon-dark) !important;
+  text-decoration: none;
+}
+
+    .nav-btn-outline{
+  border: 2px solid var(--gold);
+  color: var(--gold) !important;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-weight: 800;
+  margin-left: 8px;
+}
+
+.nav-btn-outline:hover{
+  background: var(--gold);
+  color: var(--maroon-dark) !important;
+  text-decoration: none;
 }
 
 
@@ -312,7 +305,7 @@
 <body>
 
 <header>
-  <div class="container" style="display:flex; align-items:center; padding:15px 0; gap:20px;">
+  <div class="container" style="display:flex; align-items:center; padding:22px 0; gap:20px;">
 
     <!-- LOGO -->
     <img src="berg1.png" alt="BERG Logo" style="height:60px; width:auto; flex-shrink:0;">
@@ -321,14 +314,14 @@
     <div style="flex:1;">
       <div style="
         font-family:Merriweather, serif;
-        font-size:27px;
+        font-size:26px;
         font-weight:700;
         line-height:1.2;
         white-space:nowrap;">
         Behavioural and Experimental Research Group
       </div>
 
-      <div style="font-size:16px; opacity:0.9;">
+      <div style="font-size:15px; opacity:0.9;">
         University of Peradeniya, Sri Lanka
       </div>
     </div>
@@ -344,20 +337,21 @@
   <a href="#events">Events</a>
 
    <!-- Register Button -->
-<a class="nav-cta"
-   href="https://forms.gle/JuXxdJkX1P34kKpCA"
-   target="_blank"
-   rel="noopener">
-   Register with Us
-</a>
+
+   <a class="nav-btn-outline"
+     href="https://forms.gle/JuXxdJkX1P34kKpCA"
+     target="_blank"
+     rel="noopener">
+     Register with Us
+  </a>
 
    <!-- Collaborate Button -->
-<a class="nav-cta"
-   href="https://forms.gle/JuXxdJkX1P34kKpCA"
-   target="_blank"
-   rel="noopener">
-   Collaborate with Us
-</a>
+<a class="nav-btn-outline"
+     href="https://forms.gle/JuXxdJkX1P34kKpCA"
+     target="_blank"
+     rel="noopener">
+     Collaborate with Us
+  </a>
 
   <a href="#contact">Contact</a>
 </nav>
@@ -635,6 +629,7 @@
 
 </body>
 </html>
+
 
 
 

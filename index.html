@@ -236,35 +236,44 @@
 }
 
     /* Button-style nav link */
-.nav-btn-outline{
-  border: 2px solid var(--gold);
-  color: var(--gold) !important;
-  padding: 5px 12px;
+.nav-cta{
+  position: relative;
+  padding: 7px 14px;
   border-radius: 6px;
   font-weight: 800;
-  margin-left: 8px;
-}
-
-.nav-btn-outline:hover{
-  background: var(--gold);
-  color: var(--maroon-dark) !important;
   text-decoration: none;
-}
-
-.nav-btn-outline{
-  border: 2px solid var(--gold);
   color: var(--gold) !important;
-  padding: 5px 12px;
-  border-radius: 6px;
-  font-weight: 800;
+  border: 2px solid var(--gold);
+  overflow: hidden;
   margin-left: 8px;
+  transition: color 0.3s ease;
 }
 
-.nav-btn-outline:hover{
+.nav-cta::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
   background: var(--gold);
-  color: var(--maroon-dark) !important;
-  text-decoration: none;
+  transition: left 0.3s ease;
+  z-index: 0;
 }
+
+.nav-cta:hover::before{
+  left: 0;
+}
+
+.nav-cta:hover{
+  color: var(--maroon-dark) !important;
+}
+
+.nav-cta span{
+  position: relative;
+  z-index: 1;
+}
+
 
 
     .register-btn{
@@ -333,22 +342,22 @@
   <a href="#publications">Publications</a>
   <a href="#projects">Projects</a>
   <a href="#events">Events</a>
-   
-  <!-- Register Button -->
-  <a class="nav-btn"
-     href="https://forms.gle/JuXxdJkX1P34kKpCA"
-     target="_blank"
-     rel="noopener">
-     Register with Us
-  </a>
 
-  <!-- Collaborate Button -->
-  <a class="nav-btn-outline"
-     href="https://forms.gle/JuXxdJkX1P34kKpCA"
-     target="_blank"
-     rel="noopener">
-     Collaborate with Us
-  </a>
+   <!-- Register Button -->
+<a class="nav-cta"
+   href="https://forms.gle/JuXxdJkX1P34kKpCA"
+   target="_blank"
+   rel="noopener">
+   Register with Us
+</a>
+
+   <!-- Collaborate Button -->
+<a class="nav-cta"
+   href="https://forms.gle/JuXxdJkX1P34kKpCA"
+   target="_blank"
+   rel="noopener">
+   Collaborate with Us
+</a>
 
   <a href="#contact">Contact</a>
 </nav>
@@ -626,6 +635,7 @@
 
 </body>
 </html>
+
 
 
 

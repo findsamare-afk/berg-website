@@ -235,6 +235,20 @@
   .person-photo{ height:380px; }
 }
 
+    /* Button-style nav link */
+.nav-btn{
+  background: var(--gold);
+  color: var(--maroon-dark) !important;
+  padding: 7px 12px;
+  border-radius: 6px;
+  font-weight: 800;
+}
+
+.nav-btn:hover{
+  filter: brightness(0.96);
+  text-decoration: none;
+}
+
   </style>
 </head>
 
@@ -258,13 +272,24 @@
   <div style="min-width:220px;"></div>
 </div>
   
-  <nav class="container">
-    <a href="#about">About</a>
-    <a href="#research">Research</a>
-    <a href="#people">People</a>
-    <a href="#publications">Publications</a>
-    <a href="#contact">Contact</a>
-  </nav>
+ <nav class="container">
+  <a href="#about">About</a>
+  <a href="#people">People</a>
+  <a href="#publications">Publications</a>
+  <a href="#projects">Projects</a>
+  <a href="#events">Events</a>
+
+  <!-- Button-style link -->
+  <a class="nav-btn"
+     href="PASTE_YOUR_GOOGLE_FORM_LINK_HERE"
+     target="_blank"
+     rel="noopener">
+    Register with Us
+  </a>
+
+  <a href="#contact">Contact</a>
+</nav>
+
 </header>
 
 <!-- ===== HERO WITH BACKGROUND SLIDESHOW ===== -->
@@ -447,6 +472,35 @@
   </article>
 </section>
 
+  <section class="section" id="projects">
+  <h2>Projects</h2>
+  <div class="title-line"></div>
+  <p>
+    BERG undertakes laboratory, lab-in-the-field, and policy wind-tunnel projects
+    examining behavioural responses in economic and organisational settings.
+  </p>
+</section>
+
+  <section class="section" id="events">
+  <h2>Events</h2>
+  <div class="title-line"></div>
+  <p>
+    BERG regularly organises research seminars, experimental workshops,
+    and public lectures on behavioural and experimental economics.
+  </p>
+</section>
+
+  <section class="section" id="register">
+  <h2>Register with Us</h2>
+  <div class="title-line"></div>
+  <p>
+    Interested in participating in experiments or collaborating with BERG?
+    Register your interest by contacting us at
+    <a href="mailto:berg@mgt.pdn.ac.lk">berg@mgt.pdn.ac.lk</a>.
+  </p>
+</section>
+
+
   <section class="section" id="contact">
     <h2>Contact</h2>
     <div class="title-line"></div>
@@ -487,6 +541,7 @@
 
 </body>
 </html>
+
 
 
 

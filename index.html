@@ -303,6 +303,49 @@
   margin-bottom: 30px;   /* space between papers */
 }
 
+    /* ===== Project item + mini slider ===== */
+.project-item{
+  border:1px solid var(--border);
+  border-radius: var(--radius);
+  padding:18px;
+  background:#fff;
+  margin-bottom: 40px;
+}
+
+.project-slider{
+  position: relative;
+  height: 260px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 12px 0 16px;
+  background:#111;
+}
+
+.project-slider img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  opacity:0;
+  transition: opacity 1.2s ease-in-out;
+}
+
+.project-slider img.active{
+  opacity:1;
+}
+
+.project-meta{
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: -6px;
+}
+
+.project-bullets{
+  margin: 10px 0 0;
+  padding-left: 18px;
+}
+
 
   </style>
 </head>
@@ -576,15 +619,52 @@ This experimental study examines how socio-economic constraints influence social
 </section>
 
 
-
-  <section class="section" id="projects">
+<section class="section" id="projects">
   <h2>Projects</h2>
   <div class="title-line"></div>
-  <p>
-    BERG undertakes laboratory, lab-in-the-field, and policy wind-tunnel projects
-    examining behavioural responses in economic and organisational settings.
-  </p>
+
+  <div class="project-item">
+    <h3>Prosocial Motivation, Service Performance, and Equity of Care in Sri Lankan Public Hospitals</h3>
+    <p class="project-meta"><strong>Method:</strong> Lab-in-the-field experiment | <strong>Participants:</strong> 131 nurses | <strong>Sites:</strong> IDH & Mullaitivu District Hospital</p>
+
+    <!-- Slider (add your project photos here) -->
+    <div class="project-slider" data-slider="nurses-project">
+      <img src="nurses1.jpg" class="active" alt="Project photo 1">
+      <img src="nurses2.jpg" alt="Project photo 2">
+      <img src="nurses3.jpg" alt="Project photo 3">
+      <img src="nurses4.jpg" alt="Project photo 4">
+      <img src="nurses5.jpg" alt="Project photo 5">
+      <img src="nurses6.jpg" alt="Project photo 6">
+    </div>
+
+    <p>
+      This project examines how nurses’ prosocial motivation supports service performance and equitable care
+      during Sri Lanka’s post-pandemic economic crisis. We conducted lab-in-the-field sessions with nursing
+      professionals from the National Institute of Infectious Diseases (IDH) and Mullaitivu District Hospital.
+      Prosocial motivation was measured using a structured perception survey, while equity of care was assessed
+      using a video-vignette task where nurses evaluated the same pneumonia symptoms presented by either a
+      socioeconomically disadvantaged (poor) or advantaged (non-poor) patient.
+    </p>
+
+    <p>
+      Performance was measured using a real-effort envelope-stuffing task under three conditions: baseline
+      (routine), recognition-based rewarding treatment (gold-star competition), and a prosocial mission treatment
+      where effort contributed to fundraising for economically vulnerable families. Findings indicate high prosocial
+      motivation among nurses, broadly equitable diagnostic/treatment recommendations across patient status, and
+      substantially higher effort under the prosocial mission compared to baseline and recognition incentives.
+    </p>
+
+    <p><em>Key insight:</em> Intrinsic, mission-based prosocial motivation can outperform recognition incentives in raising effort and supporting equitable care in resource-constrained public services.</p>
+
+    <ul class="project-bullets">
+      <li><strong>Tools:</strong> Prosocial motivation scale + video vignette + real-effort task</li>
+      <li><strong>Equity measure:</strong> Poor vs non-poor patient presentation (same symptoms)</li>
+      <li><strong>Effort measure:</strong> Output differences across baseline, reward, and prosocial mission conditions</li>
+    </ul>
+  </div>
+
 </section>
+
 
   <section class="section" id="events">
   <h2>Events</h2>
@@ -666,8 +746,27 @@ This experimental study examines how socio-economic constraints influence social
   setInterval(changeSlide, 4000); // change every 4 seconds
 </script>
 
+  <script>
+  // Mini slider for project cards (auto-rotates each slider independently)
+  function initProjectSlider(sliderEl, intervalMs = 3500){
+    const imgs = sliderEl.querySelectorAll("img");
+    if (!imgs.length) return;
+    let i = 0;
+
+    setInterval(() => {
+      imgs[i].classList.remove("active");
+      i = (i + 1) % imgs.length;
+      imgs[i].classList.add("active");
+    }, intervalMs);
+  }
+
+  document.querySelectorAll(".project-slider").forEach(sl => initProjectSlider(sl, 3500));
+</script>
+
+
 </body>
 </html>
+
 
 
 

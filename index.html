@@ -362,35 +362,45 @@
   min-height: 200px;
 }
 
+    /*profile links and icons*/
+
     .profile-links{
-  margin-top:12px;
+  margin-top:14px;
   display:flex;
-  gap:12px;
+  gap:14px;
 }
 
 .profile-links a{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  width:34px;
-  height:34px;
+  width:42px;
+  height:42px;
   border-radius:50%;
-  background:#f5f5f5;
-  transition: all 0.3s ease;
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  box-shadow:
+    4px 4px 10px rgba(0,0,0,0.08),
+    -4px -4px 10px rgba(255,255,255,0.9);
+  transition: all 0.35s ease;
+  position:relative;
 }
 
 .profile-links a:hover{
-  background: var(--gold);
+  transform: translateY(-4px);
+  box-shadow:
+    6px 6px 14px rgba(0,0,0,0.12),
+    -6px -6px 14px rgba(255,255,255,1);
 }
 
 .profile-links svg{
-  width:18px;
-  height:18px;
+  width:20px;
+  height:20px;
   fill: var(--maroon-dark);
+  transition: fill 0.3s ease;
 }
 
 .profile-links a:hover svg{
-  fill: var(--maroon-dark);
+  fill: var(--gold);
 }
 
     
@@ -532,7 +542,7 @@
        <div class="profile-links">
 
   <!-- Email -->
-  <a href="dijs@mgt.pdn.ac.lk" target="_blank">
+  <a href="mailto:dijs@mgt.pdn.ac.lk" target="_blank">
     <svg viewBox="0 0 24 24">
       <path d="M2 4h20v16H2V4zm10 9L3 6h18l-9 7z"/>
     </svg>
@@ -1019,6 +1029,7 @@
 
 </body>
 </html>
+
 
 
 

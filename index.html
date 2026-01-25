@@ -6,7 +6,10 @@
   <title>BERG — Behavioural and Experimental Research Group | University of Peradeniya</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+  
   <style>
     :root{
       --maroon:#5B0F1A;
@@ -364,43 +367,29 @@
 
     /*profile links and icons*/
 
-    .profile-links{
+.profile-links{
   margin-top:14px;
   display:flex;
-  gap:14px;
+  gap:18px;
+  font-size:22px;
 }
 
 .profile-links a{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  width:42px;
-  height:42px;
-  border-radius:50%;
-  background: linear-gradient(145deg, #ffffff, #e6e6e6);
-  box-shadow:
-    4px 4px 10px rgba(0,0,0,0.08),
-    -4px -4px 10px rgba(255,255,255,0.9);
-  transition: all 0.35s ease;
-  position:relative;
+  transition: all 0.3s ease;
 }
 
 .profile-links a:hover{
-  transform: translateY(-4px);
-  box-shadow:
-    6px 6px 14px rgba(0,0,0,0.12),
-    -6px -6px 14px rgba(255,255,255,1);
+  transform: translateY(-3px);
 }
 
-.profile-links svg{
-  width:20px;
-  height:20px;
-  fill: var(--maroon-dark);
-  transition: fill 0.3s ease;
-}
+/* Brand colors */
+.email-icon{ color:#b00020; }
+.scholar-icon{ color:#4285F4; }
+.orcid-icon{ color:#A6CE39; }
+.web-icon{ color:#444; }
 
-.profile-links a:hover svg{
-  fill: var(--gold);
+.profile-links a:hover i{
+  opacity:0.8;
 }
 
     
@@ -539,34 +528,27 @@
         <p class="person-bio">
           Isuru Samaranayake is the founding initiator of the Behavioural and Experimental Research Group (BERG) and a Senior Lecturer at the Faculty of Management, University of Peradeniya. His research focuses on prosocial motivation, organisational behaviour, and behavioural public sector research, examining how norms, incentives, identity, and institutional design influence individual and organisational performance. He is particularly interested in conducting laboratory and field experiments to generate rigorous evidence for public policy and institutional reform. He holds an MSc in Behavioural and Experimental Economics from the University of East Anglia, UK, as a Commonwealth Scholar, and an MPhil in Economics from the University of Peradeniya. He is currently pursuing a PhD in Behavioural Public Sector Economics at the University of East Anglia, further advancing his work on motivation, governance, and evidence-based policy design.
         </p>
-       <div class="profile-links">
+
+<div class="profile-links">
 
   <!-- Email -->
-  <a href="mailto:dijs@mgt.pdn.ac.lk" target="_blank">
-    <svg viewBox="0 0 24 24">
-      <path d="M2 4h20v16H2V4zm10 9L3 6h18l-9 7z"/>
-    </svg>
+  <a href="mailto:dijs@mgt.pdn.ac.lk">
+    <i class="fas fa-envelope email-icon"></i>
   </a>
 
   <!-- Google Scholar -->
   <a href="https://scholar.google.com/citations?user=F6nzpcAAAAAJ&hl=en" target="_blank">
-    <svg viewBox="0 0 24 24">
-      <path d="M12 3L1 9l11 6 9-4.9V17h2V9L12 3z"/>
-    </svg>
+    <i class="fas fa-graduation-cap scholar-icon"></i>
   </a>
 
   <!-- ORCID -->
   <a href="https://orcid.org/0000-0002-1300-4524" target="_blank">
-    <svg viewBox="0 0 24 24">
-      <path d="M12 0a12 12 0 100 24A12 12 0 0012 0zm-1 17H9V9h2v8zm-1-9.5A1.5 1.5 0 1110 4a1.5 1.5 0 010 3.5zM15 17h-2v-4a2 2 0 00-4 0h-2a4 4 0 018 0v4z"/>
-    </svg>
+    <i class="fab fa-orcid orcid-icon"></i>
   </a>
 
-  <!-- Personal Website -->
+  <!-- Website -->
   <a href="https://www.thecn.com/DS1585" target="_blank">
-    <svg viewBox="0 0 24 24">
-      <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 17.9V14h3.9A8 8 0 0113 19.9zM11 19.9A8 8 0 017.1 14H11v5.9zM7.1 12A8 8 0 0111 4.1V10H7.1zM13 4.1A8 8 0 0116.9 12H13V4.1z"/>
-    </svg>
+    <i class="fas fa-globe web-icon"></i>
   </a>
 
 </div>
@@ -582,34 +564,27 @@
         <p class="person-bio">
           Dr Sheheryar Banuri is Associate Professor of Economics at the University of East Anglia and a leading scholar in behavioural development economics, specialising in human motivation and incentive design. He also currently serves as Dean and Tutor by Fellow at Hughes Hall, University of Cambridge. With nearly two decades of research experience, his work focuses on human decision-making using laboratory and field experiments conducted globally. His research has informed policy design and provided guidance to governments and multilateral organisations, including the World Bank, the United Nations, and GIZ. He is a co-author of the World Bank’s World Development Report 2015: Mind, Society, and Behaviour, and the author of Good Decisions for Strange Situations and The Decisive Mind. His expertise supports BERG through strategic guidance on experimental design, behavioural interventions, and applied research in social and economic contexts.
         </p>
+
         <div class="profile-links">
 
   <!-- Email -->
-  <a href="mailto:email@example.com" target="_blank">
-    <svg viewBox="0 0 24 24">
-      <path d="M2 4h20v16H2V4zm10 9L3 6h18l-9 7z"/>
-    </svg>
+  <a href="mailto:email@example.com">
+    <i class="fas fa-envelope email-icon"></i>
   </a>
 
   <!-- Google Scholar -->
   <a href="https://scholar.google.com/..." target="_blank">
-    <svg viewBox="0 0 24 24">
-      <path d="M12 3L1 9l11 6 9-4.9V17h2V9L12 3z"/>
-    </svg>
+    <i class="fas fa-graduation-cap scholar-icon"></i>
   </a>
 
   <!-- ORCID -->
   <a href="https://orcid.org/..." target="_blank">
-    <svg viewBox="0 0 24 24">
-      <path d="M12 0a12 12 0 100 24A12 12 0 0012 0zm-1 17H9V9h2v8zm-1-9.5A1.5 1.5 0 1110 4a1.5 1.5 0 010 3.5zM15 17h-2v-4a2 2 0 00-4 0h-2a4 4 0 018 0v4z"/>
-    </svg>
+    <i class="fab fa-orcid orcid-icon"></i>
   </a>
 
-  <!-- Personal Website -->
+  <!-- Website -->
   <a href="https://personalwebsite.com" target="_blank">
-    <svg viewBox="0 0 24 24">
-      <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 17.9V14h3.9A8 8 0 0113 19.9zM11 19.9A8 8 0 017.1 14H11v5.9zM7.1 12A8 8 0 0111 4.1V10H7.1zM13 4.1A8 8 0 0116.9 12H13V4.1z"/>
-    </svg>
+    <i class="fas fa-globe web-icon"></i>
   </a>
 
 </div>
@@ -627,37 +602,31 @@
         <p class="person-bio">
           Uwin Ariyarathne is a PhD student in Finance at the University of Oklahoma’s Michael F. Price College of Business. His research focuses on empirical asset pricing, particularly how textual information and investor sentiment influence the equity risk premium, using machine learning and large-scale data. His broader interests include behavioural finance and experimental asset markets, examining how psychological biases and information processing shape financial decision-making and market outcomes. Prior to his doctoral studies, he served as a Lecturer in the Department of Business Finance at the University of Peradeniya, where he received the 2022 Teaching Excellence Award and secured multiple research grants. He completed an MSc in Finance & Accounting at Imperial College London as a Commonwealth Scholar funded by the UK government, strengthening his expertise in financial economics and quantitative analysis.
            </p>
-         <div class="profile-links">
+
+        <div class="profile-links">
 
   <!-- Email -->
-  <a href="mailto:email@example.com" target="_blank">
-    <svg viewBox="0 0 24 24">
-      <path d="M2 4h20v16H2V4zm10 9L3 6h18l-9 7z"/>
-    </svg>
+  <a href="mailto:email@example.com">
+    <i class="fas fa-envelope email-icon"></i>
   </a>
 
   <!-- Google Scholar -->
   <a href="https://scholar.google.com/..." target="_blank">
-    <svg viewBox="0 0 24 24">
-      <path d="M12 3L1 9l11 6 9-4.9V17h2V9L12 3z"/>
-    </svg>
+    <i class="fas fa-graduation-cap scholar-icon"></i>
   </a>
 
   <!-- ORCID -->
   <a href="https://orcid.org/..." target="_blank">
-    <svg viewBox="0 0 24 24">
-      <path d="M12 0a12 12 0 100 24A12 12 0 0012 0zm-1 17H9V9h2v8zm-1-9.5A1.5 1.5 0 1110 4a1.5 1.5 0 010 3.5zM15 17h-2v-4a2 2 0 00-4 0h-2a4 4 0 018 0v4z"/>
-    </svg>
+    <i class="fab fa-orcid orcid-icon"></i>
   </a>
 
-  <!-- Personal Website -->
+  <!-- Website -->
   <a href="https://personalwebsite.com" target="_blank">
-    <svg viewBox="0 0 24 24">
-      <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 17.9V14h3.9A8 8 0 0113 19.9zM11 19.9A8 8 0 017.1 14H11v5.9zM7.1 12A8 8 0 0111 4.1V10H7.1zM13 4.1A8 8 0 0116.9 12H13V4.1z"/>
-    </svg>
+    <i class="fas fa-globe web-icon"></i>
   </a>
 
 </div>
+
       </div>
     </div>
 
@@ -669,37 +638,31 @@
         <p class="person-bio">
           Rakhitha Munasinghe is a Senior Lecturer in the Department of Human Resource Management at the Faculty of Management, University of Peradeniya, Sri Lanka. Her academic expertise lies in organisational behaviour and industrial psychology, where she applies behavioural insights to better understand workplace dynamics, employee motivation, and effective human resource practices. Her research and teaching focus on linking behavioural theory with practical organisational challenges, contributing to the development of evidence-based HRM approaches. She holds an MBA from the University of Colombo and a BBMgt in Human Resource Management (Hons.) from the University of Kelaniya. Through her work, she seeks to enhance HRM education while strengthening behavioural understanding within organisations, promoting improved performance, employee well-being, and more effective institutional practices in both public and private sector contexts.
         </p>
+
         <div class="profile-links">
 
   <!-- Email -->
-  <a href="mailto:email@example.com" target="_blank">
-    <svg viewBox="0 0 24 24">
-      <path d="M2 4h20v16H2V4zm10 9L3 6h18l-9 7z"/>
-    </svg>
+  <a href="mailto:email@example.com">
+    <i class="fas fa-envelope email-icon"></i>
   </a>
 
   <!-- Google Scholar -->
   <a href="https://scholar.google.com/..." target="_blank">
-    <svg viewBox="0 0 24 24">
-      <path d="M12 3L1 9l11 6 9-4.9V17h2V9L12 3z"/>
-    </svg>
+    <i class="fas fa-graduation-cap scholar-icon"></i>
   </a>
 
   <!-- ORCID -->
   <a href="https://orcid.org/..." target="_blank">
-    <svg viewBox="0 0 24 24">
-      <path d="M12 0a12 12 0 100 24A12 12 0 0012 0zm-1 17H9V9h2v8zm-1-9.5A1.5 1.5 0 1110 4a1.5 1.5 0 010 3.5zM15 17h-2v-4a2 2 0 00-4 0h-2a4 4 0 018 0v4z"/>
-    </svg>
+    <i class="fab fa-orcid orcid-icon"></i>
   </a>
 
-  <!-- Personal Website -->
+  <!-- Website -->
   <a href="https://personalwebsite.com" target="_blank">
-    <svg viewBox="0 0 24 24">
-      <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 17.9V14h3.9A8 8 0 0113 19.9zM11 19.9A8 8 0 017.1 14H11v5.9zM7.1 12A8 8 0 0111 4.1V10H7.1zM13 4.1A8 8 0 0116.9 12H13V4.1z"/>
-    </svg>
+    <i class="fas fa-globe web-icon"></i>
   </a>
 
 </div>
+
       </div>
     </div>
 
@@ -711,37 +674,31 @@
         <p class="person-bio">
           Sameera Fernando is a Senior Lecturer and Head of the Department of Management Studies at the Faculty of Management, University of Peradeniya, Sri Lanka. He specialises in strategic management, leadership, and competitive analysis, applying strategic frameworks to strengthen managerial decision-making and organisational performance. His research examines organisational culture and its influence on competitive advantage in dynamic environments. His broader interests include corporate strategy, strategic alignment, performance management, and organisational sustainability in both public and private sector institutions. He holds an MBA from the University of Colombo and a BSc in Business Administration from the University of Sri Jayewardenepura. He is committed to advancing strategic management education and promoting evidence-based management practices within evolving organisational contexts.
           </p>
-         <div class="profile-links">
+
+        <div class="profile-links">
 
   <!-- Email -->
-  <a href="mailto:email@example.com" target="_blank">
-    <svg viewBox="0 0 24 24">
-      <path d="M2 4h20v16H2V4zm10 9L3 6h18l-9 7z"/>
-    </svg>
+  <a href="mailto:email@example.com">
+    <i class="fas fa-envelope email-icon"></i>
   </a>
 
   <!-- Google Scholar -->
   <a href="https://scholar.google.com/..." target="_blank">
-    <svg viewBox="0 0 24 24">
-      <path d="M12 3L1 9l11 6 9-4.9V17h2V9L12 3z"/>
-    </svg>
+    <i class="fas fa-graduation-cap scholar-icon"></i>
   </a>
 
   <!-- ORCID -->
   <a href="https://orcid.org/..." target="_blank">
-    <svg viewBox="0 0 24 24">
-      <path d="M12 0a12 12 0 100 24A12 12 0 0012 0zm-1 17H9V9h2v8zm-1-9.5A1.5 1.5 0 1110 4a1.5 1.5 0 010 3.5zM15 17h-2v-4a2 2 0 00-4 0h-2a4 4 0 018 0v4z"/>
-    </svg>
+    <i class="fab fa-orcid orcid-icon"></i>
   </a>
 
-  <!-- Personal Website -->
+  <!-- Website -->
   <a href="https://personalwebsite.com" target="_blank">
-    <svg viewBox="0 0 24 24">
-      <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 17.9V14h3.9A8 8 0 0113 19.9zM11 19.9A8 8 0 017.1 14H11v5.9zM7.1 12A8 8 0 0111 4.1V10H7.1zM13 4.1A8 8 0 0116.9 12H13V4.1z"/>
-    </svg>
+    <i class="fas fa-globe web-icon"></i>
   </a>
 
 </div>
+
       </div>
     </div>
 
@@ -753,37 +710,31 @@
         <p class="person-bio">
      Udayangani Rathnayake is a Senior Lecturer and Head of the Department of Marketing Management at the Faculty of Management, University of Peradeniya. She specialises in marketing strategy, with particular interests in experiential marketing and emerging areas such as neuromarketing. Her research focuses on customer experience, brand development, and strategic positioning within competitive and evolving market environments. While her current work is not primarily centred on neuropsychological methods, she is keen to further explore behavioural and neuroscientific approaches to understanding consumer decision-making. Through her academic and research activities, she aims to integrate theory with practical insights, contributing to innovative, evidence-based marketing practices. Her work seeks to strengthen strategic thinking in marketing and promote adaptive approaches aligned with changing consumer behaviour and dynamic market conditions.
         </p>
-          <div class="profile-links">
+
+        <div class="profile-links">
 
   <!-- Email -->
-  <a href="mailto:email@example.com" target="_blank">
-    <svg viewBox="0 0 24 24">
-      <path d="M2 4h20v16H2V4zm10 9L3 6h18l-9 7z"/>
-    </svg>
+  <a href="mailto:email@example.com">
+    <i class="fas fa-envelope email-icon"></i>
   </a>
 
   <!-- Google Scholar -->
   <a href="https://scholar.google.com/..." target="_blank">
-    <svg viewBox="0 0 24 24">
-      <path d="M12 3L1 9l11 6 9-4.9V17h2V9L12 3z"/>
-    </svg>
+    <i class="fas fa-graduation-cap scholar-icon"></i>
   </a>
 
   <!-- ORCID -->
   <a href="https://orcid.org/..." target="_blank">
-    <svg viewBox="0 0 24 24">
-      <path d="M12 0a12 12 0 100 24A12 12 0 0012 0zm-1 17H9V9h2v8zm-1-9.5A1.5 1.5 0 1110 4a1.5 1.5 0 010 3.5zM15 17h-2v-4a2 2 0 00-4 0h-2a4 4 0 018 0v4z"/>
-    </svg>
+    <i class="fab fa-orcid orcid-icon"></i>
   </a>
 
-  <!-- Personal Website -->
+  <!-- Website -->
   <a href="https://personalwebsite.com" target="_blank">
-    <svg viewBox="0 0 24 24">
-      <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 17.9V14h3.9A8 8 0 0113 19.9zM11 19.9A8 8 0 017.1 14H11v5.9zM7.1 12A8 8 0 0111 4.1V10H7.1zM13 4.1A8 8 0 0116.9 12H13V4.1z"/>
-    </svg>
+    <i class="fas fa-globe web-icon"></i>
   </a>
 
 </div>
+
       </div>
     </div>
 
@@ -796,37 +747,31 @@
         <p class="person-bio">
           Mithursan Asokkumar serves as a Research Assistant to the University Research Committee at the University of Peradeniya. He previously worked as an Assistant Lecturer in the Department of Management Studies at the Faculty of Management. His academic interests lie in experimental research, applied economics, and organisational studies. His undergraduate research was an experimental study examining the prosocial motivation of nursing professionals and its impact on their performance in the public health sector. This research earned him the Best Undergraduate Research Paper of the Year Award, highlighting his strong foundation in empirical and experimental methods. He continues to contribute to interdisciplinary research initiatives, supporting behavioural and experimental studies that promote evidence-based decision-making and strengthen research capacity within academic and public sector institutions.
         </p>
-         <div class="profile-links">
+
+        <div class="profile-links">
 
   <!-- Email -->
-  <a href="mailto:email@example.com" target="_blank">
-    <svg viewBox="0 0 24 24">
-      <path d="M2 4h20v16H2V4zm10 9L3 6h18l-9 7z"/>
-    </svg>
+  <a href="mailto:email@example.com">
+    <i class="fas fa-envelope email-icon"></i>
   </a>
 
   <!-- Google Scholar -->
   <a href="https://scholar.google.com/..." target="_blank">
-    <svg viewBox="0 0 24 24">
-      <path d="M12 3L1 9l11 6 9-4.9V17h2V9L12 3z"/>
-    </svg>
+    <i class="fas fa-graduation-cap scholar-icon"></i>
   </a>
 
   <!-- ORCID -->
   <a href="https://orcid.org/..." target="_blank">
-    <svg viewBox="0 0 24 24">
-      <path d="M12 0a12 12 0 100 24A12 12 0 0012 0zm-1 17H9V9h2v8zm-1-9.5A1.5 1.5 0 1110 4a1.5 1.5 0 010 3.5zM15 17h-2v-4a2 2 0 00-4 0h-2a4 4 0 018 0v4z"/>
-    </svg>
+    <i class="fab fa-orcid orcid-icon"></i>
   </a>
 
-  <!-- Personal Website -->
+  <!-- Website -->
   <a href="https://personalwebsite.com" target="_blank">
-    <svg viewBox="0 0 24 24">
-      <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 17.9V14h3.9A8 8 0 0113 19.9zM11 19.9A8 8 0 017.1 14H11v5.9zM7.1 12A8 8 0 0111 4.1V10H7.1zM13 4.1A8 8 0 0116.9 12H13V4.1z"/>
-    </svg>
+    <i class="fas fa-globe web-icon"></i>
   </a>
 
 </div>
+
       </div>
     </div>
 
@@ -1029,6 +974,7 @@
 
 </body>
 </html>
+
 
 
 
